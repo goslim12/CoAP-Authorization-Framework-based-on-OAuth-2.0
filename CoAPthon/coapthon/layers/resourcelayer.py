@@ -367,8 +367,12 @@ class ResourceLayer(object):
                                     active_option.value = str(True)
                                 #     True
                                 transaction.response.add_option(active_option)
+                    else:
+                        active_option = Option()
+                        active_option.number = defines.OptionRegistry.ACTIVE.number
+                        active_option.value = str(False)
 
-            except:
+        except:
                 error_option = Option()
                 error_option.number = defines.OptionRegistry.ERROR.number
                 error_option.value = 0

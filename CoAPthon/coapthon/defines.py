@@ -135,18 +135,29 @@ class OptionRegistry(object):
     # EXP = OptionItem(77, "Exp", INTEGER, False, None)
 
 
-    #message
+    # #message
+    # TOKEN_TYPE = OptionItem(72, "Token_type", STRING, False, None)
+    # SCOPE = OptionItem(76, "Scope", STRING, False, None)
+    # BEARER = OptionItem(71, "Bearer", OPAQUE, False, None)
+    #
+    # #request
+    # TOKEN_TYPE_HINT = OptionItem(73, "Token_type_hint", STRING, False, None)
+    # #response
+    # ERROR = OptionItem(74, "Error", INTEGER, False, None)
+    # ACTIVE = OptionItem(75, "Active", STRING, False, None)
+    #
+    # EXP = OptionItem(77, "Exp", INTEGER, False, None)
+
+
+
     TOKEN_TYPE = OptionItem(72, "Token_type", STRING, False, None)
     SCOPE = OptionItem(76, "Scope", STRING, False, None)
     BEARER = OptionItem(71, "Bearer", OPAQUE, False, None)
-
-    #request
     TOKEN_TYPE_HINT = OptionItem(73, "Token_type_hint", STRING, False, None)
-    #response
     ERROR = OptionItem(74, "Error", INTEGER, False, None)
     ACTIVE = OptionItem(75, "Active", STRING, False, None)
-
     EXP = OptionItem(77, "Exp", INTEGER, False, None)
+
 
     LIST = {
         0: RESERVED,

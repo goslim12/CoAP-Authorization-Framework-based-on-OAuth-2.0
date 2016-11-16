@@ -81,11 +81,11 @@ class BasicResource(Resource):
         #         self.payload = "insufficient_scope"
 
     def render_GET(self, request):
-        # for option in request.options:
-        #     if option.number == defines.OptionRegistry.BEARER.number:
-        # str(request.bearer
-        self.num += 1
-        self.payload = str(self.num)
+        # # for option in request.options:
+        # #     if option.number == defines.OptionRegistry.BEARER.number:
+        # # str(request.bearer
+        # self.num += 1
+        # self.payload = str(self.num)
 
 
         if str(request.bearer) in self.Bearer:
@@ -103,19 +103,6 @@ class BasicResource(Resource):
             # response = None
             # response = client.get(path)
 
-
-            print "<!!!!>"
-            print "<!!!!>"
-            print "<!!!!>"
-            print "<!!!!>"
-            print "<!!!!>"
-            print "<!!!!>"
-            print "<!!!!>"
-            print "<!!!!>"
-            print "<!!!!>"
-            print "<!!!!>"
-            print "<!!!!>"
-            print str(request.bearer)
 
             response = client.introspect(path, str(request.bearer), access_path="basic")
             client.introspect_observer(path, str(request.bearer), callback=self.cache_token, access_path="basic")
